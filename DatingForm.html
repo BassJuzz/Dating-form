@@ -5,48 +5,45 @@
 	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </head>
 <body>
-	<h1>Please Enter Your Details For Our Dating Website!</h1>
+	<h1>Please Enter Your Details For Our Dating Website!</h1> <br>
 
 	<form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
 		
 	<div>
-		<fieldset>
+		<fieldset style="width: 50%">
 			<legend>Your Face</legend>
 
-			<label for="photoToUpload">Your image:</label>
-			<input type="file" name="photoToUpload"><br>
+			<label for="avatar">Your image:</label>
+			<input type="file" name="avatar" id="avatar" required><br>
 
 			<label for="preview">Image preview:</label>
-			<img id="preview">
+			<img id="preview" name="preview">
 		</fieldset> <br>
 	</div>
 
 	<div>
-		<fieldset>
+		<fieldset style="width: 50%">
 			<legend>Your General Details</legend>
 
 			<label for="name">Name:</label>
-			<input type="text" name="name" value="Your full name"><br>
+			<input type="text" name="name" placeholder="Your full name" required><br>
 
 			<label for="gender">Gender:</label>
-			<input type="radio" name="gender" value="male">Male
-			<input type="radio" name="gender" value="female">Female 
+			<input type="radio" name="gender" value="male" required>Male
+			<input type="radio" name="gender" value="female" required>Female 
 			<br>
 
 			<label for="age">Age:</label>
-			<!-- fix size of the input field -->
-			<input type="number" name="age" value="18"><br>
+			<input type="number" name="age" value="18" min="0" max="99" step="1" required><br>
 
 			<label for="date">Date of birth:</label>
-			<!-- find smg about the firmat of date -->
-			<input type="date" name="date" value="dd/mm/yyyy"><br>
+			<input type="date" name="date" required><br>
 
 			<label for="color">Favorite color:</label>
 			<input type="color" name="color"><br>
 
 			<label for="country">Which country:</label>
 			<select name="country">
-				<!-- No sekection alternative -->
 				<option value="noSelection"></option>
 				<option value="kiev">Kiev</option>
 				<option value="moscow">Moscow</option>
@@ -59,19 +56,41 @@
 	</div>
 
 	<div>
-		<fieldset>
+		<fieldset style="width: 50%">
 			<legend>Your Indicators</legend>
+
+			<label for="height">Height:</label>
+			Short <input type="range" min="0" max="100" name="height" step="5" value="50"> Tall <br>
+
+			<label for="salary">Salary:</label>
+			Poor <input type="range" min="0" max="100" name="salary" step="5" value="50"> Rich <br>
+
 		</fieldset> <br>
 	</div>
 
 	<div>
-		<fieldset>
+		<fieldset style="width: 50%">
 			<legend>Your Contact Information</legend>
+
+			<label for="email">Email:</label>
+			<input type="email" name="email" required> <br>
+
+			<label for="mobile">Mobile:</label>
+			<input type="tel" name="mobile" required> <br>
+
+			<label for="address">Address:</label>
+			<textarea rows="2" cols="20" name="address" required></textarea> <br>
+
+			<label for="contact">Method to cantact you:</label>
+			<input type="checkbox" name="contact" value="vk" >VK
+			<input type="checkbox" name="contact" value="telegram">Telegram
+			<input type="checkbox" name="contact" value="viber">Viber <br>
+
 		</fieldset> <br>
 	</div>
 
 	 <div>
-	 	<input type="Submit" value="Send">
+	 	<input type="Submit" value="Submit">
 	 </div>
 	</form>
 
