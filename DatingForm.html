@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form for dating startup</title>
+	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</head>
+<body>
+	<h1>Please Enter Your Details For Our Dating Website!</h1>
+
+	<form method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" enctype="multipart/form-data">
+		
+	<div>
+		<fieldset>
+			<legend>Your Face</legend>
+
+			<label for="photoToUpload">Your image:</label>
+			<input type="file" name="photoToUpload"><br>
+
+			<label for="preview">Image preview:</label>
+			<img id="preview">
+		</fieldset> <br>
+	</div>
+
+	<div>
+		<fieldset>
+			<legend>Your General Details</legend>
+
+			<label for="name">Name:</label>
+			<input type="text" name="name" value="Your full name"><br>
+
+			<label for="gender">Gender:</label>
+			<input type="radio" name="gender" value="male">Male
+			<input type="radio" name="gender" value="female">Female 
+			<br>
+
+			<label for="age">Age:</label>
+			<!-- fix size of the input field -->
+			<input type="number" name="age" value="18"><br>
+
+			<label for="date">Date of birth:</label>
+			<!-- find smg about the firmat of date -->
+			<input type="date" name="date" value="dd/mm/yyyy"><br>
+
+			<label for="color">Favorite color:</label>
+			<input type="color" name="color"><br>
+
+			<label for="country">Which country:</label>
+			<select name="country">
+				<!-- No sekection alternative -->
+				<option value="noSelection"></option>
+				<option value="kiev">Kiev</option>
+				<option value="moscow">Moscow</option>
+				<option value="newYourk">New Yourk</option>
+				<option value="iraq">Iraq</option>
+				<option value="tokio">Tokio</option>
+			</select><br>
+
+		</fieldset> <br>
+	</div>
+
+	<div>
+		<fieldset>
+			<legend>Your Indicators</legend>
+		</fieldset> <br>
+	</div>
+
+	<div>
+		<fieldset>
+			<legend>Your Contact Information</legend>
+		</fieldset> <br>
+	</div>
+
+	 <div>
+	 	<input type="Submit" value="Send">
+	 </div>
+	</form>
+
+</body>
+</html>
